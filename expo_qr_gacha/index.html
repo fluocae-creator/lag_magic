@@ -1,1 +1,58 @@
-test
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>羅雀鎮名片抽選</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="landing" class="panel" aria-label="入口封面">
+        <img id="heroImage" class="hero-image" src="images/hero-bird.png" alt="羅雀鎮主視覺小鳥" />
+        <h1 class="title">羅雀鎮名片抽選</h1>
+        <p class="creator">創作者：Lag Magic</p>
+        <p class="intro">掃描後抽一張今日推薦名片，找到屬於你的角色風格！</p>
+        <button id="enterBtn" class="btn btn-primary" type="button">進入名片抽選</button>
+      </section>
+
+      <section id="gacha" class="panel hidden" aria-label="名片抽選頁">
+        <h2 class="subtitle">羅雀鎮今日推薦卡</h2>
+        <p class="description">按下按鈕翻開卡片，看看今天抽到哪位創作者名片風格。</p>
+
+        <div id="cardStage" class="card-stage" aria-live="polite">
+          <img id="cardImage" class="card-image" src="images/card-back.png" alt="名片卡背" />
+        </div>
+
+        <button id="drawBtn" class="btn btn-primary" type="button">抽一張名片</button>
+
+        <article id="resultCard" class="result-card hidden" aria-label="抽卡結果">
+          <h3 id="resultName">尚未抽卡</h3>
+          <ul>
+            <li><strong>對應名片：</strong><span id="resultBusinessCard">-</span></li>
+            <li><strong>主題：</strong><span id="resultTheme">-</span></li>
+          </ul>
+          <p id="resultDescription">點擊「抽一張名片」開始互動。</p>
+        </article>
+
+        <p class="notice">此為展場趣味互動，實體名片款式依現場庫存為準。</p>
+
+        <div class="action-group">
+          <button id="retryBtn" class="btn" type="button">再抽一次</button>
+          <button id="backBtn" class="btn" type="button">回到入口</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© Lag Magic</p>
+      <div class="footer-links">
+        <a href="https://example.com" target="_blank" rel="noopener">官方網站</a>
+        <a href="https://store.steampowered.com" target="_blank" rel="noopener">Steam</a>
+        <a href="https://x.com" target="_blank" rel="noopener">SNS</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
